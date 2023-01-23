@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<link rel="icon" type="image/x_icon" href="favicon.jpg">
+<style>
+    body {
+        background-image: url('w.jpeg');
+    }
+</style>
+
+<body>
+    <div class="background">
+        <div class="form_box">
+
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="togl-btn" onclick="Login()">Login</button>
+                <button type="button" class="togl-btn" onclick="Register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/tamajit.das.10/"><img src="fb2.png"></a>
+                <a href="mailto:dastamajit207@gmail.com"><img src="gm2.png"></a>
+                <a href="https://www.instagram.com/tama_adi_das/?fbclid=IwAR12N1HEUXEzSPlXA5soxM9LVvFjdudBMOonYpM8Z1h3BbF8Ln_hY0x7aE4"><img src="R.png"></a>
+            </div>
+            <form id="Login" class="input-grp">
+                <input type="text" class="input-field" placeholder="User ID" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="checkbox-field"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <form id="Register" class="input-grp">
+                <input type="text" class="input-field" placeholder="User ID" required>
+                <input type="email" class="input-field" placeholder="Email ID" required>
+                <input type="password" class="input-field" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Enter Password" required>
+                <input type="password" class="input-field" placeholder="Confirm Password" required>
+                <input type="checkbox" class="checkbox-field"><span>I agree to the Terms & Condition</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+
+        </div>
+
+    </div>
+    <script>
+        var x = document.getElementById("Login")
+        var y = document.getElementById("Register")
+        var z = document.getElementById("btn")
+
+        function Register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function Login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+
+</html>
